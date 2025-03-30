@@ -1,0 +1,40 @@
+/* estilos de los inputs */
+.input-css {
+    background-color: #f8f9fa;
+    /* Color de fondo personalizado */
+    border: 2px solid  rgb(77, 115, 167);
+    /* Borde azul */
+    color: #151414;
+    /* Color del texto */
+  }
+
+  .input-css:focus {
+    background-color: rgb(233, 237, 241);
+    /* Cambia el fondo al enfocar */
+    border-color: rgb(18, 18, 18);
+    /* Cambia el borde al enfocar */
+    box-shadow: 2px 2px 5px rgba(18, 18, 18, 0.5);
+    /* Efecto de sombra */
+  }
+
+
+  /*----------- titulo-formulario ----------*/
+.st-h3 {
+  font-family: "Imperial Script", cursive;
+  font-weight: 700;
+  background-color: rgb(77, 115, 167);
+  color: blanchedalmond;
+  padding: 0 .3rem;
+  /* animation: salto 2s infinite ease-in-out; */
+  animation:salto 3s ease-in-out infinite; 
+}
+
+  /*------- animacion_salto-titulo -------*/
+
+@keyframes salto{
+  0%, 100% { transform: translateY(0); }
+  20% { transform: translateY(-20px); }
+  40% { transform: translateY(0); }
+  60% { transform: translateY(-15px); }
+  80% { transform: translateY(0); }
+}

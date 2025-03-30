@@ -1,0 +1,116 @@
+body {
+    background-color: rgb(77, 115, 167);
+}
+
+/* -----------header-menu -------------*/
+
+@font-face {
+    font-family: "Trade Gothic LT";
+    src: url("fonts/TradeGothicLT.woff2") format("woff2"),
+        url("fonts/TradeGothicLT.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* ---------main-el-huarique------- */
+/* .main-figure-yio{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+} */
+#h-video {
+    /* height: calc(100vh - 98px);(header-noFixed) */
+    height: calc(100vh);
+    object-fit: cover;
+}
+
+/* el -------quienes somos-huarique-------- */
+
+.bg-image-huarique {
+    background-image: url('../../images-videos/fondo-huarique.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* max-height: 414px; */
+    max-height: 414px;
+    /* height: 100%; */
+}
+
+.bg-image-huarique h1 {
+    color: rgb(77, 115, 167);
+    font-family: "Imperial Script", cursive;
+    font-weight: 700;
+}
+
+.bg-image-huarique p {
+    font-size: 1.5rem;
+    color: rgb(77, 115, 167);
+    font-family: "Imperial Script", cursive;
+    font-weight: 400;
+    text-align: justify;
+    padding: 0 .5rem;
+}
+
+.bg-image-huarique .separador {
+    background-color: rgb(77, 115, 167);
+}
+
+
+/* ----------nuestro equipo-------- */
+.st-reserva {
+    height: 300px;
+}
+
+.st-formulario {
+    /* width: 95%; */
+    background-color: rgba(77, 115, 167, 0.8);
+}
+
+/*----------- titulo-formulario ----------*/
+.st-h3 {
+    font-family: "Imperial Script", cursive;
+    font-weight: 700;
+    background-color: rgb(77, 115, 167);
+    color: blanchedalmond;
+    padding: 0 .3rem;
+    /* animation: salto 2s infinite ease-in-out; */
+    animation:salto 3s ease-in-out infinite; 
+  
+}
+/* --------img-background-formulario------- */
+.bg-image-form {
+    background-image: url('../../images-videos/fondo-form.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* -------imagen-chef----- */
+.bg-image {
+    background-image: url('../../images-videos/chefs-cocina.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+.bg-cont {
+    background-color: rgba(77, 115, 167, 0.8);
+    min-height: 550px;
+    max-width: 450px;
+}
+
+.bg-cont h2 {
+    text-align: justify;
+    padding: 0 .5rem;
+    font-family: "Imperial Script", cursive;
+    font-weight: 700;
+}
+
+.bg-cont p {
+    text-align: justify;
+    padding: 0 .5rem;
+    font-family: "Imperial Script", cursive;
+    font-weight: 400;
+    font-size: 1.5rem;
+}

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>reserva</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+        
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+
+        <link rel="stylesheet" href="public/css/generales/style.css" />
+        <!-- style-head -->
+         <link rel="stylesheet" href="public/css/personalizados/header-menu/header.css">
+         <!------- style-form------ -->
+    <link rel="stylesheet" href="public/css/personalizados/form/style_form.css">
+    
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-md navbar-dark alpha st-header">
+            <section class="container-fluid">
+                <figure class="navbar-brand mb-0">
+                    <img src="public/images-videos/logo-modified (1).png" alt="logo-pes" width="" height="" />
+                </figure>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <section class="collapse navbar-collapse" id="menu">
+                    <ul class="navbar-nav d-flex w-75 justify-content-evenly ms-lg-auto me-ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Features</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Pricing</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+                        </li>
+                    </ul>
+                </section>
+            </section>
+        </nav>
+    </header>
+
+    <main>
+        <!-------------- video   autoplay loop playsinline ------------>
+        <video class="w-100" muted id="h-video">
+            <source src="public/images-videos/la-mar.mp4" type="video/mp4" />
+        </video>
+        <!-- quienes somos -->
+        <section class="container">
+            <section class="row d-flex align-items-stretch">
+                <section class="col-12 col-md-12 mb-3 col-lg-4 d-flex st-texto">
+                    <section class="bg-image-huarique d-flex flex-column justify-content-center text-center">
+                        <h1 class="fs-3">¡EL HUARIQUE ES UNA FIESTA!</h1>
+                        <p>Es una celebración del mar, la cocina peruana y la vida.</p>
+                        <p>
+                            Es un homenaje a las cebicherías del Perú que busca poner en
+                            valor los tesoros de nuestro mar y lo mejor de nuestra cultura
+                            gastronómica.
+                        </p>
+                        <div class="container w-75 p-1 separador"></div>
+                    </section>
+                </section>
+
+                <figure class="col-12 col-md-6 col-lg-4 d-flex align-items-stretch">
+                    <img src="public/images-videos/ceviche.jpg" alt="" class="w-100 object-fit-cover"
+                        style="min-height: 414px; height: 100%;">
+                </figure>
+                <figure class="col-12 col-md-6 col-lg-4 d-flex align-items-stretch">
+                    <img src="public/images-videos/menu-foto1.webp" alt="" class="w-100 object-fit-cover"
+                        style="min-height: 414px; height: 100%;">
+                </figure>
+            </section>
+        </section>
+
+        <!-- reservas-ubicacion -->
+        <div class="container">
+            <div class="row g-1 d-flex justify-content-between mx-auto mb-3">
+                <div class="col-12 col-md-12 col-lg-4 d-flex st-reserva  ">
+                    <section class="p-1 d-flex flex-column justify-content-center gap-3 align-items-center mx-auto bg-image-form rounded-2">
+                        <h3 class="st-h3">HAGA SU RESERVA</h3>
+                        <form class="row d-flex align-items-center justify-content-center g-3 st-formulario" method="post"
+                            id="form-data">
+                            <div class=" col-12 col-md-4 st-usuario" style="display: none;">
+                                <input type="text" class="form-control input-css" name="nombre" id="nombre"
+                                    placeholder="Nombre" style="display: none;">
+                            </div>
+                            <div class="col-12 col-md-8 st-usuario" style="display: none;">
+                                <input type="text" class="form-control input-css" name="email" id="email"
+                                    placeholder="email" style="display: none;" />
+                            </div>
+                            <div class="col-8 col-md-4 st-none">
+                                <input type="date" class="form-control input-css" name="fecha" id="fecha"
+                                    placeholder="fecha" />
+                            </div>
+                            <div class="col-4 col-md-4 st-none">
+                                <select name="hora" class="form-control input-css" id="hora">
+                                    <option value="">Hora</option>
+                                </select>
+                            </div>
+                            <div class="col-3 col-sm-3 col-md-4 st-none">
+                                <input type="number" class="form-control input-css" name="personas" id="personas"
+                                    placeholder="personas" />
+                            </div>
+                            <div class="col-9 col-sm-9 col-md-6 st-none">
+                                <textarea name="observaciones" class="form-control input-css" id="observaciones"
+                                    placeholder="Anote alguna observación"></textarea>
+                            </div>
+                            <div class="col-12 col-sm-6 col-md-4 ms-auto st-none mx-auto">
+                                <span class="form-control" id="btn-next">siguiente</span>
+                            </div>
+                            <div class="col-12 col-md-4 mx-auto">
+                                <button class="btn btn-primary form-control" type="submit" id="btn-send" onclick=""
+                                    style="display: none">Enviar</button>
+                            </div>
+                        </form>
+
+                    </section>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4 d-flex bg-white st-reserva"></div>
+
+                <div class="col-12 col-md-6 col-lg-4 d-flex bg-white st-reserva"></div>
+            </div>
+        </div>
+
+
+        <section class="container-fluid bg-image d-flex align-items-center">
+            <section class="container">
+                <section class="row justify-content-center ">
+                    <section
+                        class="col-12 col-md-4 bg-cont me-auto text-center lh-sm  d-flex flex-column align-items-center justify-content-center text-light w-100">
+                        <h2 class="fs-3">Nuestro Equipo</h2>
+                        <p class="cont-equipo">
+                            La característica del sabor diferente es el resultado de un
+                            trabajo en equipo, apasionado y comprometido con el paladar
+                            exigente de cada uno de nuestros clientes
+                        </p>
+                        <p>
+                            Desde los chefs hasta el personal de atención que ofrecen
+                            calidez y hospitalidad. Nuestro equipo es el motor que hace
+                            posible la magia en cada visita.
+                        </p>
+                        <div class="p-1 bg-white w-75"></div>
+                    </section>
+                </section>
+            </section>
+        </section>
+    </main>
+    <footer></footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,0 +1,56 @@
+@font-face {
+    font-family: "Trade Gothic LT";
+    src: url("fonts/TradeGothicLT.woff2") format("woff2"),
+        url("fonts/TradeGothicLT.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+.alpha {
+    background-color: rgb(77, 115, 167);
+    font-family: "Trade Gothic LT", sans-serif;
+    font-size: 2.5rem;
+}
+
+/* ------animacion header */
+@keyframes header {
+    from {
+        background-color: rgb(77, 115, 167);
+        font-size: 2.5rem;
+        min-height: 70px;
+    }
+
+    to {
+        background-color: rgba(77, 115, 167, 0.7);
+        font-size: 1.5rem;
+        min-height: 50px;
+    }
+}
+
+.st-header {
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    animation: header linear;
+    animation-timeline: scroll();
+    animation-range: 0 150px;
+    animation-fill-mode: both;
+}
+
+@keyframes logo {
+    form {
+        width: 70px;
+    }
+
+    to {
+        width: 40px;
+    }
+}
+
+.st-header figure img {
+    width: 70px;
+    animation: logo linear;
+    animation-timeline: scroll();
+    animation-range: 0 150px;
+    animation-fill-mode: both;
+}
