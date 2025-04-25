@@ -35,6 +35,7 @@
     animation-timeline: scroll();
     animation-range: 0 150px;
     animation-fill-mode: both;
+    /* animation-delay: 3s; */
 }
 
 @keyframes logo {

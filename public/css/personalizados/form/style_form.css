@@ -1,40 +1,174 @@
 /* estilos de los inputs */
 .input-css {
-    background-color: #f8f9fa;
-    /* Color de fondo personalizado */
-    border: 2px solid  rgb(77, 115, 167);
-    /* Borde azul */
-    color: #151414;
-    /* Color del texto */
-  }
+  background-color: #f8f9fa;
+  /* Color de fondo personalizado */
+  border: 2px solid rgb(77, 115, 167);
+  /* Borde azul */
+  color: #151414;
+  /*muestra el icono de select*/
+  appearance: auto;
+  /* -webkit-appearance: auto; */
+  margin-bottom: .5rem;
+  resize: none;
+}
 
-  .input-css:focus {
-    background-color: rgb(233, 237, 241);
-    /* Cambia el fondo al enfocar */
-    border-color: rgb(18, 18, 18);
-    /* Cambia el borde al enfocar */
-    box-shadow: 2px 2px 5px rgba(18, 18, 18, 0.5);
-    /* Efecto de sombra */
-  }
+.input-css:focus {
+  background-color: rgb(233, 237, 241);
+  /* Cambia el fondo al enfocar */
+  border-color: rgb(18, 18, 18);
+  /* Cambia el borde al enfocar */
+  box-shadow: 2px 2px 5px rgba(18, 18, 18, 0.5);
+  /* Efecto de sombra */
+}
 
 
-  /*----------- titulo-formulario ----------*/
+/*----------- titulo-formulario ----------*/
 .st-h3 {
+  text-align: center;
   font-family: "Imperial Script", cursive;
   font-weight: 700;
   background-color: rgb(77, 115, 167);
   color: blanchedalmond;
   padding: 0 .3rem;
   /* animation: salto 2s infinite ease-in-out; */
-  animation:salto 3s ease-in-out infinite; 
+  animation: salto 3s ease-in-out infinite;
 }
 
-  /*------- animacion_salto-titulo -------*/
+/*------- animacion_salto-titulo -------*/
 
-@keyframes salto{
-  0%, 100% { transform: translateY(0); }
-  20% { transform: translateY(-20px); }
-  40% { transform: translateY(0); }
-  60% { transform: translateY(-15px); }
-  80% { transform: translateY(0); }
+@keyframes salto {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  20% {
+    transform: translateY(-20px);
+  }
+
+  40% {
+    transform: translateY(0);
+  }
+
+  60% {
+    transform: translateY(-15px);
+  }
+
+  80% {
+    transform: translateY(0);
+  }
+}
+
+/* contenedor de inputs ocultos inicialmente */
+/* Estado visible */
+.st-block {
+  overflow: hidden;
+  opacity: 1;
+  transform: translateX(0);
+  max-height: 1000px;
+  /* estimá un alto grande si no sabés el real */
+  transition: transform 1.5s ease, opacity 1.5s ease, max-height 1.5s ease, padding 1.5s ease, margin 1.5s ease;
+}
+
+/* Estado oculto */
+.hidden {
+  overflow: hidden;
+  transform: translateX(-100%);
+  opacity: 0;
+  max-height: 0;
+  padding: 0;
+  margin: 0;
+}
+
+
+#btn-next,
+#btn-send,
+#btn-back {
+  cursor: pointer;
+  margin-bottom: .5rem;
+  /* font-size: 1.2rem; */
+}
+
+/* estilos a los button atras/enviar*/
+.btn-back_send {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-around;
+}
+
+/*----popUp_reserva(respuesta de formulario)------*/
+/*contenedor del formulario */
+.position {
+  position: relative;
+}
+
+/* clase oculta al principio*/
+.popUp_reserva {
+
+  overflow: hidden;
+  opacity: 0;
+  max-height: 0;
+  padding: 0;
+  margin: 0;
+  transition: transform 1.5s ease, opacity 1.5s ease, max-height 1.5s ease, padding 1.5s ease, margin 1.5s ease;
+
+  width: 70%;
+  height: 100px;
+  background-color: rgb(77, 115, 167);
+  position: absolute;
+  transform: translate(-50%, -300%);
+  top: 50%;
+  left: 50%;
+}
+
+/*mostrar clase*/
+.mostrar_popUp {
+  opacity: 1;
+  max-height: 1000px;
+transform: translate(-50%,-50%);
+z-index: 1;
+}
+
+/* overlay(fondo semitransparente) contenedor padre del formulario*/
+/*div semioscuro*/
+.bg-overlay {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7); /* Oscurecer el fondo */
+  z-index: 0; /* Está debajo del popup */
+  transition: opacity 0.3s ease;
+}
+/*div semioscuro para div-padre*/
+.bg-overlay.activado {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 0.3s ease; /* Transición sin delay */
+}
+
+/* mensajes del backend*/
+.msg-reserva{
+  text-align: center;
+  font-size: 1.4rem;
+  color: whitesmoke;
+  font-weight: 800;
+}
+.parrafo-reserva{
+  color: whitesmoke;
+  text-align: center;
+  font-size: 1rem;
+}
+
+/*ocultar popUp*/
+.popUp_reserva i{
+  color: red;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  cursor: pointer;
 }

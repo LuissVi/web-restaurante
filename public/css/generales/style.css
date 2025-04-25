@@ -55,17 +55,41 @@ body {
     background-color: rgb(77, 115, 167);
 }
 
+/* --------SECCION RESERVA-UBICACION------- */
 
-/* ----------nuestro equipo-------- */
 .st-reserva {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
     height: 300px;
+    /* align-items: center; */
+    justify-content: center;
+    /* width: 100%; */
 }
-
-.st-formulario {
-    /* width: 95%; */
-    background-color: rgba(77, 115, 167, 0.8);
+/* --------img-background-formulario(div-padre)------- */
+.bg-image-form {
+    position: relative;
+    background-image: url('../../images-videos/fondo-form.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
-
+/* .bg-image-form::before{
+    content: "";
+     position: absolute;
+     inset: 0; 
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 4; 
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+.bg-image-form.activo::before{
+    opacity: 1;
+}
+.bg-image-form > * {
+    position: relative;
+    z-index: 4;
+  } */
 /*----------- titulo-formulario ----------*/
 .st-h3 {
     font-family: "Imperial Script", cursive;
@@ -75,16 +99,39 @@ body {
     padding: 0 .3rem;
     /* animation: salto 2s infinite ease-in-out; */
     animation:salto 3s ease-in-out infinite; 
-  
 }
-/* --------img-background-formulario------- */
-.bg-image-form {
-    background-image: url('../../images-videos/fondo-form.jpg');
+
+/* ----fondo(backgraund) de form----- */
+.st-formulario {
+    /* width: 95%; */
+    background-color: rgba(77, 115, 167, 0.8);
+}
+
+/* --------agregar mapa(CSS)-seccion2------- */
+.st-reserva .map {
+    flex-grow: 1;
+    width: 100%;
+    height: 100%;
+   
+    border: 2px solid blue;
+    /* margin: auto;
+    height: 100%;width: 100%;
+    /* width: 400px; */
+    /* object-fit: cover; */
+    /* min-width: 360px; */
+    /* min-width: 360px;
+    max-width: 450px;   */
+}
+
+/* ------seccion3-url-img------ */
+.st-reserva-s3{
+    background-image: url("../../images-videos/Pisco-Sour.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    border-radius: 7px;
 }
-
+   /* ----------NUESTRO EQUIPO-------- */
 /* -------imagen-chef----- */
 .bg-image {
     background-image: url('../../images-videos/chefs-cocina.jpg');
