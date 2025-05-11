@@ -1,0 +1,2 @@
+#Evita que se muestren archivos del directorio
+Options -Indexes

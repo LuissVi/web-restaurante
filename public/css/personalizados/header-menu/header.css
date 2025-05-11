@@ -55,3 +55,20 @@
     animation-range: 0 150px;
     animation-fill-mode: both;
 }
+
+@media (max-width:1090px){
+    @keyframes header {
+        from {
+            background-color: rgb(77, 115, 167);
+            font-size: 2rem;
+            min-height: 70px;
+        }
+    
+        to {
+            background-color: rgba(77, 115, 167, 0.7);
+            font-size: 1.1rem;
+            min-height: 50px;
+        }
+    }
+}
+

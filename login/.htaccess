@@ -1,0 +1,7 @@
+# Este archivo controla el comportamiento del servidor Apache
+
+# Establecer login.php como archivo principal en esta carpeta
+DirectoryIndex login.php
+
+#Evita que se muestren archivos del directorio
+Options -Indexes

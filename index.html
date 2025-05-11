@@ -12,14 +12,16 @@
 
     <link rel="stylesheet" href="public/css/generales/style.css" />
     <!-- style-head -->
-    <link rel="stylesheet" href="public/css/personalizados/header-menu/header.css">
+    <link rel="stylesheet" href="public/css/personalizados/header-menu/header.css" />
     <!------- style-form------ -->
-    <link rel="stylesheet" href="public/css/personalizados/form/style_form.css">
+    <link rel="stylesheet" href="public/css/personalizados/form/style_form.css" />
+    <!-- google fonts -->
+   
 
 </head>
 
 <body>
-    <header>
+    <header id="head">
         <nav class="navbar navbar-expand-md navbar-dark alpha st-header">
             <section class="container-fluid">
                 <figure class="navbar-brand mb-0">
@@ -32,18 +34,18 @@
                 </button>
 
                 <section class="collapse navbar-collapse" id="menu">
-                    <ul class="navbar-nav d-flex w-75 justify-content-evenly ms-lg-auto me-ms-auto">
+                    <ul class="navbar-nav d-flex w-75 justify-content-evenly  ms-md-auto ms-lg-auto  st-font">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                            <a class="nav-link active" aria-current="page" href="#head">Inicio</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Features</a>
+                            <a class="nav-link" href="#equipo">Nuestro Equipo</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Pricing</a>
+                            <a class="nav-link" href="#seccion4">MENÚ</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+                        <li class="nav-item st-nav-reserva">
+                            <a class="nav-link" href="#huarique">Reserva</a>
                         </li>
                     </ul>
                 </section>
@@ -51,119 +53,128 @@
         </nav>
     </header>
 
-    <main>
+    <main class="st-main">
         <!-------------- video: autoplay loop playsinline ------------>
-        <video class="w-100" muted id="h-video">
+        <video class="w-100" muted id="h-video" autoplay loop playsinline>
             <source src="public/images-videos/la-mar.mp4" type="video/mp4" />
         </video>
         <!-- quienes somos -->
-        <section class="container">
+        <section class="container-fluid" id="huarique">
             <section class="row d-flex align-items-stretch">
-                <section class="col-12 col-md-12 mb-3 col-lg-4 d-flex st-texto">
+
+                <figure class="col-12 col-md-12 col-lg-4 d-flex align-items-stretch">
+                    <img src="public/images-videos/ceviche.jpg" alt="" class="w-100 object-fit-cover"
+                        style="min-height: 414px; height: 100%" />
+                </figure>
+                <section class="col-12 col-md-12 mb-3 col-lg-4 d-flex st-texto position">
                     <section class="bg-image-huarique d-flex flex-column justify-content-center text-center">
-                        <h1 class="fs-3">¡EL HUARIQUE ES UNA FIESTA!</h1>
-                        <p>Es una celebración del mar, la cocina peruana y la vida.</p>
-                        <p>
-                            Es un homenaje a las cebicherías del Perú que busca poner en
-                            valor los tesoros de nuestro mar y lo mejor de nuestra cultura
-                            gastronómica.
-                        </p>
-                        <div class="container w-75 p-1 separador"></div>
+                        <div class="capa-opaca">
+                            <h2 class="fs-3">¡EL HUARIQUE ES UNA FIESTA!</h2>
+                            <p>Es una celebración del mar, la cocina peruana y la vida.</p>
+                            <p>
+                                Es un homenaje a las cebicherías del Perú que busca poner en
+                                valor los tesoros de nuestro mar y lo mejor de nuestra cultura
+                                gastronómica.
+                            </p>
+                            <div class="container w-75 p-1 separador"></div>
+                        </div>
                     </section>
                 </section>
-
-                <figure class="col-12 col-md-6 col-lg-4 d-flex align-items-stretch">
-                    <img src="public/images-videos/ceviche.jpg" alt="" class="w-100 object-fit-cover"
-                        style="min-height: 414px; height: 100%;">
-                </figure>
-                <figure class="col-12 col-md-6 col-lg-4 d-flex align-items-stretch">
-                    <img src="public/images-videos/menu-foto1.webp" alt="" class="w-100 object-fit-cover"
-                        style="min-height: 414px; height: 100%;">
+                <figure class="col-12 col-md-12 col-lg-4 d-flex align-items-stretch">
+                    <img src="public/images-videos/lomo-saltado.jpg" alt="" class="w-100 object-fit-cover"
+                        style="min-height: 414px; height: 100%" />
                 </figure>
             </section>
         </section>
 
         <!-- reservas-ubicacion -->
-        <div class="container">
+        <div class="container-fluid">
             <div class="row g-1 d-flex justify-content-between mx-auto mb-3">
+
+                <div class="col-12 col-md-6 col-lg-4 d-flex bg-white st-reserva st-reserva-s3">
+                    <div class="div-opaco d-flex flex-column justify-content-center">
+                        <h1>Cevichería - Restaurant <span class="d-block imperial-script-regular">El Huarique</span></h1>
+                        <h3>Horario: <span class="d-block">Martes-domingo: 10am-4pm 6pm-12am</span></h3>
+                        <h3>Ubicación: <span class="d-block">Av.de Manoteras 32-Madrid</span></h3>
+                        <div class="w-50 p-1"></div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4 d-flex bg-white st-reserva">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3034.4322492174238!2d-3.668187524128626!3d40.48782377142832!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd422953b2eff025%3A0xf5f0ad68aa874d74!2sAv.%20de%20Manoteras%2C%2032%2C%20Hortaleza%2C%2028050%20Madrid!5e0!3m2!1ses!2ses!4v1743435748264!5m2!1ses!2ses"
+                        class="map" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+
                 <div class="col-12 col-md-12 col-lg-4 d-flex st-reserva">
-                   
                     <section
-                        class="p-1 d-flex flex-column justify-content-center gap-3 align-items-center mx-auto bg-image-form rounded-2 p-3 position" id="popOverlay">
+                        class="p-1 d-flex flex-column justify-content-center gap-3 align-items-center mx-auto bg-image-form rounded-2 p-3 position"
+                        id="popOverlay">
                         <h3 class="st-h3" id="h3-reserva">HAGA SU RESERVA</h3>
 
-                        <form class="row d-flex align-items-center justify-content-center g-3 st-formulario" method="post" id="form-data">
-                            <div class=" col-12 col-md-4 st-usuario hidden">
+                        <form class="row d-flex align-items-center justify-content-center g-3 st-formulario"
+                            method="post" id="form-data">
+                            <div class="col-12 col-md-4 st-usuario hidden">
                                 <input type="text" class="form-control input-css" name="nombre" id="nombre"
-                                    placeholder="Nombre" required>
-                                    <div class="invalid-feedback"></div>
-
+                                    placeholder="Nombre" required />
+                                <div class="invalid-feedback"></div>
                             </div>
-                            <div class="col-12 col-md-8 st-usuario hidden" >
+                            <div class="col-12 col-md-8 st-usuario hidden">
                                 <input type="email" class="form-control input-css" name="email" id="email"
-                                    placeholder="email" required>
-                                    <div class="invalid-feedback"></div>
+                                    placeholder="email" required />
+                                <div class="invalid-feedback"></div>
                             </div>
                             <div class="col-8 col-md-4 st-none">
                                 <input type="date" class="form-control input-css" name="fecha" id="fecha"
-                                    placeholder="fecha" required>
-                                    <div class="invalid-feedback"></div>
+                                    placeholder="fecha" required />
+                                <div class="invalid-feedback"></div>
                             </div>
                             <div class="col-4 col-md-4 st-none">
                                 <select name="hora" class="form-control input-css" id="hora" required>
                                     <div class="invalid-feedback"></div>
-                                    <option value="" selected disabled></option>
+                                    <option value="" selected disabled>Hora</option>
                                 </select>
                             </div>
                             <div class="col-3 col-sm-3 col-md-4 st-none">
                                 <input type="number" class="form-control input-css" name="personas" id="personas"
-                                    placeholder="personas" required>
-                                    <div class="invalid-feedback"></div>
+                                    placeholder="personas" required />
+                                <div class="invalid-feedback"></div>
                             </div>
                             <div class="col-9 col-sm-9 col-md-6 st-none">
-                                <textarea name="observacion" class="form-control input-css" id="observacion" maxlength="150"
-                                    placeholder="Anote alguna observación"></textarea>
+                                <textarea name="observacion" class="form-control input-css" id="observacion"
+                                    maxlength="150" placeholder="Anote alguna observación"></textarea>
                             </div>
                             <div class="col-4 col-sm-3 col-md-3 ms-auto st-none mx-auto">
-                                <button type="button" class="btn btn-primary" id="btn-next">siguiente</button>
+                                <button type="button" class="btn btn-primary" id="btn-next">
+                                    siguiente
+                                </button>
                             </div>
                             <div class="col-12 col-md-12 mx-auto st-usuario hidden btn-back_send">
-                                <button class="btn btn-primary form-control" type="button" id="btn-back">ATRAS</button>
-                                <button class="btn btn-primary form-control" type="submit" id="btn-send">ENVIAR</button>
-
+                                <button class="btn btn-primary form-control" type="button" id="btn-back">
+                                    ATRAS
+                                </button>
+                                <button class="btn btn-primary form-control" type="submit" id="btn-send">
+                                    ENVIAR
+                                </button>
                             </div>
                         </form>
                         <!-- div para oscurecer el contenedor -->
                         <div class="bg-overlay"></div>
                         <section class="popUp_reserva" id="popUp_reserva">
                             <i class="bi bi-check-circle-fill" onclick="ocultarPopUp()"></i>
-
                         </section>
-
                     </section>
                 </div>
-                
-                <div class="col-12 col-md-6 col-lg-4 d-flex bg-white st-reserva">
 
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3034.4322492174238!2d-3.668187524128626!3d40.48782377142832!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd422953b2eff025%3A0xf5f0ad68aa874d74!2sAv.%20de%20Manoteras%2C%2032%2C%20Hortaleza%2C%2028050%20Madrid!5e0!3m2!1ses!2ses!4v1743435748264!5m2!1ses!2ses"
-                        class="map" allowfullscreen="" loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade"></iframe>
-
-                </div>
-
-                <div class="col-12 col-md-6 col-lg-4 d-flex bg-white st-reserva st-reserva-s3">
-
-                </div>
             </div>
         </div>
 
-
-        <section class="container-fluid bg-image d-flex align-items-center">
+        <section class="container-fluid bg-image d-flex align-items-center" id="equipo">
             <section class="container">
-                <section class="row justify-content-center ">
+                <section class="row justify-content-center">
                     <section
-                        class="col-12 col-md-4 bg-cont me-auto text-center lh-sm  d-flex flex-column align-items-center justify-content-center text-light w-100">
+                        class="col-12 col-md-4 bg-cont me-auto text-center lh-sm d-flex flex-column align-items-center justify-content-center text-light w-100">
                         <h2 class="fs-3">Nuestro Equipo</h2>
                         <p class="cont-equipo">
                             La característica del sabor diferente es el resultado de un
@@ -180,14 +191,74 @@
                 </section>
             </section>
         </section>
+        <!-- seccion menu -->
+        <section class="menu-img" id="seccion4">
+            <div class="w-100 div-opacity d-flex align-items-center justify-content-center">
+                <h2 class="texto">EL MENÚ</h2>
+                <h3 class="texto2">Ingredientes frescos, sabor único</h3>
+                <!-- carrousel -->
+                <div class="div-carousel-wrapper">
+
+                    <div class="div-carousel-fade w-100 d-flex flex-column justify-content-evenly">
+
+                        <div id="carouselMenu" class="carousel slide carousel-fade" data-bs-ride="carousel"
+                            data-bs-interval="2000">
+
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+
+
+                                    <img src="public/images-videos/lomo_saltado_peru.jpg" class="d-block w-100" alt="">
+
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="public/images-videos/aji_de_gallina.jpg" class="d-block w-100" alt="">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="public/images-videos/anticuchos.jpg" class="d-block w-100" alt="">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="public/images-videos/arroz_con_pato_peru.jpg" class="d-block w-100"
+                                        alt="">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="public/images-videos/causa_rellena.jpg" class="d-block w-100" alt="">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="public/images-videos/papa_a_la_huancaina_peru.jpg" class="d-block w-100"
+                                        alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#" class="link-platos">Descubre más...</a>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
-    <footer></footer>
+    <footer>
+        <div class="container-fluid st-footer">
+            <div class="container-fluid div-opacidad">
+                <figure><img src="public/images-videos/phone.png" alt=""></figure>
+                <h2>Reservas e informacion</h2>
+                <h2>123 456 789</h2>
+                <section class="iconos">
+                    <span><a href="#">f</a></span>
+                    <span><a href="#"><i class="bi bi-geo-alt"></i></a></span>
+                </section>
+                <ul>
+                    <li>Copyright © 2025 Luis Villar</li>
+                    <li>Política de Privacidad y Aviso Legal</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
-        <script src="public/js/formulario.js"></script>
-        <script src="public/js/cliente.js"></script>
+    <script src="public/js/formulario.js"></script>
+    <script src="public/js/cliente.js"></script>
 </body>
 
 </html>
