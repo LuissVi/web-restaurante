@@ -21,8 +21,9 @@ html {
     font-weight: normal;
     font-style: normal;
 }
+
 /** font cursiva*/
-  
+
 .st-main {
     background-image: url(../../images-videos/fondoMarino2.jpg);
     background-size: cover;
@@ -157,36 +158,43 @@ html {
     background-repeat: no-repeat;
     border-radius: 7px;
 }
+
 /** texto */
-.div-opaco{
+.div-opaco {
     background-color: rgba(77, 115, 167, 0.5);
     position: relative;
     width: 100%;
     right: 0;
     left: 0;
 }
-.st-reserva-s3 h1{
+
+.st-reserva-s3 h1 {
     color: rgb(57, 83, 118);
     text-align: center;
     font-family: "Imperial Script", cursive;
     text-shadow: 3px 3px 4px rgba(255, 255, 255, 0.8);
 }
-.st-reserva-s3 h1 span, .st-reserva-s3 h3 span{
+
+.st-reserva-s3 h1 span,
+.st-reserva-s3 h3 span {
     text-shadow: none;
     text-shadow: 3px 3px 4px rgb(0, 0, 0);
 
 }
-.st-reserva-s3 h3{
+
+.st-reserva-s3 h3 {
     color: rgb(57, 83, 118);
     text-shadow: 3px 3px 4px rgba(255, 255, 255, 0.8);
 
 }
-.st-reserva-s3 span{
+
+.st-reserva-s3 span {
     font-size: 1.6rem;
     text-align: center;
     font-family: "Imperial Script", cursive;
-color: whitesmoke
+    color: whitesmoke
 }
+
 /* ----------NUESTRO EQUIPO-------- */
 /* -------imagen-chef----- */
 .bg-image {
@@ -332,9 +340,21 @@ color: whitesmoke
     transition: all .5s ease-in-out;
     border-radius: 5px;
 }
-.div-carousel-fade .link-platos:hover{
+
+.div-carousel-fade .link-platos:hover {
     background-color: rgba(38, 54, 73, 0.9);
     transform: scale(1.05);
+}
+
+/** *texto nombre a las imágenes del carousel */
+.cont-img-carousel{
+    position: relative;
+}
+.cont-img-carousel h3 {
+    /* position: absolute; */
+    left: 0;
+    right: 0;
+    color: rgb(29, 29, 29);
 }
 
 /** *Estilos del FOOTER */
@@ -428,17 +448,34 @@ color: whitesmoke
         position: relative;
         align-items: center;
     }
-    .st-font{
+
+    .st-font {
         width: 100% !important;
     }
 }
 
-@media (max-width:500px){
-    .div-carousel-wrapper{
+@media (max-width:500px) {
+
+    .div-carousel-wrapper {
         width: 100%;
     }
-    .div-carousel-fade .link-platos{
+
+    .div-carousel-fade .link-platos {
         margin-top: 0;
     }
-    
+
+    .st-footer {
+        height: 60vh;
+    }
+
+    .div-opacidad .iconos {
+        width: 50%;
+    }
+
+    .div-opacidad ul {
+        flex-direction: column;
+        width: 100%;
+        padding: 0;
+        margin-top: 1rem;
+    }
 }
