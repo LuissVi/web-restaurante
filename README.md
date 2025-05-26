@@ -21,7 +21,7 @@ Este proyecto es una aplicación web para un restaurante, que permite a los clie
 ### Administrador (Backend)
 - 🖥️ Panel de administración de reservas
 - 📨 Se puede enviar correo de confirmación o rechazo desde el panel del administrador.
-
+- 🔗 [Ver proyecto](http://lomio.42web.io/proyecto-web-reservas/)
 ## Cómo usar
 
 1. **Clonar el repositorio**  
