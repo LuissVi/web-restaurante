@@ -1,0 +1,38 @@
+/** ---ANIMACION COMPATIBLE(TODOS LOS NAVEGADORES(en prueba)---*/
+/* Animación */
+@keyframes left {
+  from {
+    transform: translateX(-200%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Estilo inicial: fuera de pantalla */
+.texto-impar {
+  opacity: 0;
+  transform: translateX(-200%);
+}
+
+/* Se activa al entrar al viewport */
+.texto-impar.visible {
+  animation: left 1s forwards ease-out;
+}
+
+
+
+/* Estado inicial (fuera de pantalla a la derecha) */
+.texto-par {
+  transform: translateX(200%);
+  opacity: 0;
+  transition: transform 1s ease-out, opacity 1s ease-out;
+}
+
+/* Estado visible (al hacer scroll) */
+.texto-par.visible {
+  transform: translateX(0);
+  opacity: 1;
+}

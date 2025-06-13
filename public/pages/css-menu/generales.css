@@ -1,0 +1,497 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.st-font {
+    font-family: "Imperial Script", cursive;
+}
+
+/** stilo de texto reserva en menu-nav*/
+.st-nav-reserva {
+    border-radius: 10px;
+    padding: 0;
+}
+
+/** bck imagen menu*/
+.st-main-menu .baner-menu {
+    background-image: url("../images/baner-menu.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+/** ------ elementos del baner ------*/
+.baner-menu figure {
+    /* max-width: 15rem; */
+    /* background-color: blue; */
+    max-height: 13rem;
+}
+
+.baner-menu figure img {
+    height: 100%;
+}
+
+.baner-menu h1 {
+    font-family: 'Dancing Script', cursive;
+    font-weight: 600;
+    color: whitesmoke;
+}
+
+.baner-menu .baner-ul {
+    display: flex;
+    width: 80vw;
+    list-style: none;
+    padding-left: 0;
+    justify-content: center;
+    gap: 3rem;
+}
+
+.baner-ul li {
+    border-radius: 8px;
+    background-color: rgb(77, 115, 167);
+    padding: 0 .7rem;
+    font-size: 1.4rem;
+    transition: all .6s ease-out;
+}
+
+.baner-ul li:hover {
+    background-color: #1C3D62;
+    color: whitesmoke;
+}
+
+.baner-ul li a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/** separador*/
+.la-carta .separador {
+    width: 90%;
+    height: 2rem;
+    margin: 1rem auto;
+    background-color: rgb(77, 115, 167);
+
+}
+
+/**----- section 'la carta' --------*/
+.la-carta {
+    background-image: url("../images/textura.webp");
+    height: 250vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.la-carta .carta-ul {
+    width: 75%;
+    height: 100vh;
+    padding: 1rem 0;
+    margin: auto;
+    display: flex;
+    /* flex-wrap: wrap; */
+    flex-direction: column;
+    list-style: none;
+    gap: 1rem;
+    box-sizing: border-box;
+
+}
+
+.carta2 .carta-ul2 {
+    width: 85%;
+    /* height: 250vh; */
+    padding: 1rem 0;
+    margin: auto;
+    display: flex;
+    /* flex-wrap: wrap; */
+    flex-direction: column;
+    list-style: none;
+    gap: 1rem;
+    box-sizing: border-box;
+
+}
+
+/** mensaje deslizar*/
+/* .carta2 .slide{
+    color: red;
+
+} */
+.carta-ul .li-padre {
+    width: 100%;
+    height: 50%;
+    list-style: none;
+    text-align: center;
+}
+
+.carta-ul .hijo,
+.carta-ul2 .hijo2 {
+    height: 100%;
+    display: flex;
+    list-style: none;
+}
+
+.hijo .texto-impar,
+.hijo .texto-par,
+.hijo figure,
+.hijo2 .texto-impar2,
+.hijo2 .texto-par2,
+.hijo2 figure {
+    flex: 1;
+}
+
+.hijo .texto-impar,
+.hijo .texto-par,
+.hijo2 .texto-impar2,
+.hijo2 .texto-par2 {
+    /* background-color: aqua; */
+    width: 100%;
+    /* height: 100%; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hijo .texto-impar h2,
+.hijo .texto-par h2,
+.hijo2 .texto-impar2 h2,
+.hijo2 .texto-par2 h2 {
+    width: 55%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+
+
+.hijo .texto-impar p,
+.hijo .texto-par p,
+.hijo2 .texto-par2 p,
+.hijo2 .texto-impar2 p {
+    margin: 0 auto;
+    width: 70%;
+    text-align: center;
+}
+
+.hijo figure img,
+.hijo2 figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/** ------ ANIMACION DE IMAGENES-----*/
+
+@keyframes show {
+    from {
+        opacity: 0;
+        scale: 0.05;
+    }
+
+    to {
+        opacity: 1;
+        scale: 1;
+    }
+}
+
+.hijo figure {
+    view-timeline-name: --image;
+    view-timeline-axis: block;
+    animation-timeline: --image;
+    animation-name: show;
+    animation-range: entry 0% cover 75%;
+    animation-fill-mode: both;
+}
+
+/** ------ ANIMACION DE TEXTO ------*/
+
+/** -- hidden left --*/
+@keyframes left {
+    from {
+        transform: translateX(-35%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.hijo .texto-impar {
+    view-timeline-name: --text;
+    view-timeline-axis: block;
+    animation-timeline: --text;
+    animation-name: left;
+    animation-range: entry 0% cover 75%;
+    animation-fill-mode: forwards;
+    animation-duration: 1s;
+    /* animation-timing-function: ease-in; */
+}
+
+/** hidden right*/
+@keyframes right {
+    from {
+        transform: translateX(35%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.hijo .texto-par {
+    view-timeline-name: --text;
+    view-timeline-axis: block;
+    animation-timeline: --text;
+    animation-name: right;
+    animation-range: entry 0% cover 75%;
+    animation-fill-mode: forwards;
+    animation-duration: 1s;
+    /* animation-timing-function: ease-in; */
+}
+
+.prueba {
+    height: 40vh;
+    background-color: red;
+    width: 100%;
+}
+
+/**
+ *? submenu de la carta(estática)
+ */
+.st-none {
+    display: none;
+}
+
+.sub-menu-carta .tabs {
+    /* background-image: url("../images/textura.webp"); */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    gap: 5rem;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+.sub-menu-carta .tabs a {
+    text-decoration: dotted;
+    color: inherit;
+    font-size: 1.3rem;
+}
+
+
+
+.carta2 {
+    background-image: url("../images/textura.webp");
+    /* height: 250vh; */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+
+.carta2 .carta-ul {
+    width: 75%;
+    /* height: 100vh; */
+    padding: 1rem 0;
+    margin: auto;
+    display: flex;
+    /* flex-wrap: wrap; */
+    flex-direction: column;
+    list-style: none;
+    gap: 1rem;
+    box-sizing: border-box;
+
+}
+
+/** BORDE DE LAS SECCIONES*/
+
+
+.tab-border {
+    border: 2px solid #aaa8a8;
+    border-radius: 8px;
+    /* padding: 1rem; */
+    width: 60%;
+    margin: auto;
+}
+
+.sub-menu-carta {
+    position: relative;
+    margin: auto;
+}
+
+.sub-menu-carta .tabs {
+    position: absolute;
+    top: -1.75rem;
+
+    /* background-color: red; */
+}
+
+.sub-menu-carta .tabs a.active {
+    background: rgb(240, 238, 238);
+    padding: 0 .5rem;
+    border: 2px solid #aaa8a8;
+    border-bottom: none;
+    /* Esto elimina el borde inferior */
+    z-index: 3;
+}
+
+/** clase de las secciones*/
+.tab {
+    background: #f9f9f9;
+    border-radius: 6px;
+}
+
+/** style footer*/
+.st-footer {
+    height: 60vh;
+    background-image: url("../../images-videos/mesa-rustica.jpg");
+    background-size: cover;
+    /* Muestra la imagen completa */
+    background-attachment: fixed;
+    /* (opcional) efecto parallax */
+    position: relative;
+}
+
+/** * div-capa traslúcida */
+.div-opacidad {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    position: absolute;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/** * figure telefono*/
+.div-opacidad figure {
+    max-width: 50px;
+    margin: auto;
+}
+
+/** * subtitulo h2*/
+.div-opacidad h2 {
+    text-align: center;
+    font-size: 3rem;
+    color: whitesmoke;
+    font-family: 'Berkshire Swash', handwriting;
+    letter-spacing: 2px;
+    font-weight: 600;
+}
+
+/* * iconos*/
+.div-opacidad .iconos {
+    width: 15%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.div-opacidad .iconos a {
+    text-decoration: none;
+    background-color: rgb(245, 118, 14);
+    color: white;
+    padding: 10px;
+    border-radius: 50%;
+    font-size: 3rem;
+    font-weight: bold;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    transition: background-color .4s ease-in-out;
+}
+
+.div-opacidad .iconos a:hover {
+    background-color: black;
+}
+
+/** lista*/
+.div-opacidad ul {
+    width: 50%;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 4rem;
+}
+
+.div-opacidad ul li {
+    list-style: none;
+    font-size: 1rem;
+    color: whitesmoke;
+    cursor: pointer;
+}
+
+/** MEDIA QUERYS */
+@media (max-width:770px){
+    .la-carta{
+        height: 160vh;
+    }
+    .tab-border{
+        width: 80%;
+    }
+    .sub-menu-carta .tabs{
+        gap: 3rem;
+    }
+}
+
+
+@media (max-width:600px) {
+    .st-main-menu {
+        /* overflow: hidden; */
+    }
+
+    .baner-menu .baner-ul {
+        flex-direction: column;
+        width: 60vw;
+    }
+
+    .baner-ul li {
+        text-align: center;
+    }
+
+    .la-carta {
+        height: auto;
+    }
+
+    .la-carta .carta-ul {
+        width: 75%;
+        height: auto;
+        padding: 1rem 0;
+        margin: auto;
+        display: flex;
+        /* flex-wrap: wrap; */
+        flex-direction: column;
+        list-style: none;
+        gap: 0;
+        box-sizing: border-box;
+    }
+
+    .carta2 .slide {
+        width: 100%;
+        background-color: red;
+        display: block;
+    }
+
+    .carta-ul .hijo,
+    .carta-ul2 .hijo2 {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .carta-ul .reverse, .carta-ul2 .reverse {
+        flex-direction: column-reverse;
+    }
+
+    .tab-border {
+        width: 80%;
+    }
+}

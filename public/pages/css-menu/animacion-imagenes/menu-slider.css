@@ -1,0 +1,32 @@
+@media (max-width:600px) {
+    .sub-menu-carta{
+        width: 70%;
+    }
+    .tabs {
+        overflow: hidden;
+        display: flex;
+        overflow-x: auto;
+        white-space: nowrap;
+        /* gap: 1rem; */
+        /* padding: 1rem; */
+        /* background: #f5f5f5; */
+        scrollbar-width: none;
+        /* Firefox */
+    }
+
+    .tabs::-webkit-scrollbar {
+        display: none;
+        /* Chrome/Safari */
+    }
+
+    tabs a {
+        /* flex: 0 0 auto; */
+        /* background: #ddd; */
+        /* padding: 0.5rem 1rem; */
+        /* border-radius: 4px; */
+        text-decoration: none;
+        /* color: black; */
+        /* font-weight: bold; */
+    }
+
+}
